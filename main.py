@@ -1,2 +1,4 @@
 def function():
-    pass
+    print("Hello World")
+
+function()

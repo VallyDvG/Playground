@@ -1,0 +1,28 @@
+1. Creeaza o clasa Car care are doua atribute ale obiectului: brand si year.
+Initializeaza doua obiecte diferite si afiseaza valorile atributelor lor.
+
+2. Extinde clasa Car astfel incat sa includa o metoda age() care returneaza vechimea masinii (anul curent - year).
+Afiseaza vechimea fiecarei masini create.
+
+3. Creeaza o clasa Student care are:
+• atribute ale obiectului: name, grade
+• un atribut al clasei: passing_grade = 5
+Adauga o metoda has_passed() care returneaza True daca studentul are grade >= passing_grade.
+Creeaza 3 studenti si afiseaza pentru fiecare daca a promovat.
+
+4. Creeaza o clasa Product pentru un magazin online, care are:
+• atribute: name, price, stock
+• metode:
+- is_in_stock() → returneaza True daca stock > 0
+- sell(quantity) → scade cantitatea vanduta din stoc, dar doar daca exista suficient stoc.
+Daca nu este suficient stoc, metoda trebuie sa afiseze o exceptie sau un mesaj de eroare.
+Creeaza 2 produse si simuleaza cateva vanzari.
+
+5. Creeaza o clasa TemperatureSensor folosita intr-un sistem IoT, cu:
+• atribute ale obiectului: location, temperature
+• atribut al clasei: min_safe = 0, max_safe = 40
+• metode:
+- is_safe() → returneaza True daca temperatura este intre limitele de siguranta
+- update_temperature(value) → actualizeaza temperatura
+- alert() → afiseaza un mesaj de alerta daca temperatura nu este sigura
+Creeaza doua obiecte pentru doua camere diferite si simuleaza cateva actualizari ale temperaturii.

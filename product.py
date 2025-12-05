@@ -23,8 +23,10 @@ class Product:
     def product_info(self):
         return f"There are left in stock {self.stock} items of {self.name}."
 
+    def __str__(self):
+        return f"Product: {self.name}, {self.stock}"
 
-class Inventory:
+class Inventory():
     """Class that represents an inventory of products."""
     def __init__(self):
         self.products:dict[str,Product] = {}
@@ -37,8 +39,11 @@ class Inventory:
             print(product.product_info())
 
     def show_product(self,product_name:str):
-        pass
-
+        try:
+            print(self.products[product_name])   
+        except KeyError as e:
+            print(f"Product: {e} is not in stock! ")
+            #print(e)
     def list_products(self):
         for product in self.products.values():
             print(product.product_info())
@@ -55,15 +60,20 @@ steak=Product("steak",75.3,15)
 milk=Product("milk",7.5,50)
 bread=Product("bread",3.5,30)
 
-inventory=Inventory()
 
+inventory=Inventory()
 inventory.add_product(bread)
 inventory.add_product(steak)
 inventory.add_product(milk)
 
-# print(milk.product_info())
-inventory.list_products
-milk.sell(20)
-# print(milk.product_info())
-(inventory.list_products())
+inventory.show_product("steak")
+steak.sell(2)
+inventory.show_product("steak")
 
+# inventory.show_product("milk")
+
+# print(milk.product_info())
+# inventory.list_products()
+# milk.sell(20)
+# # print(milk.product_info())
+# inventory.list_products()
